@@ -102,7 +102,7 @@ const displayController = (function() {
 
   // Add click event listener on board grid
   function addMarkerOnBoardListener(e) {
-    let gridBoxPosition = parseInt(e.path[0].getAttribute("data-position"));
+    let gridBoxPosition = parseInt(e.target.getAttribute("data-position"));
     if (gameBoard.getBoard()[gridBoxPosition] == " ") {
       (round % 2 == 0) ? player1.addMarker(gridBoxPosition) : player2.addMarker(gridBoxPosition);
       round = countRound();
